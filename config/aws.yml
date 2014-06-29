@@ -1,0 +1,14 @@
+development:
+  bucket: carsrc-dev
+  access_key_id: AKIAJMHSRAY4L3DJKNPQ
+  secret_access_key: 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
+
+test:
+  bucket: carsrc-test
+  access_key_id: AKIAJMHSRAY4L3DJKNPQ
+  secret_access_key: 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
+
+production:
+  bucket: carsrc
+  access_key_id: AKIAJMHSRAY4L3DJKNPQ
+  secret_access_key: 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

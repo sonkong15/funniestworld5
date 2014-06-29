@@ -1,0 +1,38 @@
+ <div class="row">
+
+		<% if current_user %>
+			<% if current_user.id == @user.id and @user_uploads.blank? %>
+			  	<button class="btn btn-default  btn-block " data-toggle="modal" data-target="#myModal"> Add First Photo</button>
+			<% else %>
+			  	<h3 style=" color: white;"> Photos from <%= @user.name %></h3>
+			  	<div>
+			  		<%= image_tag("underline.jpg", :style => "width: 66%;") %>
+			  	</div>
+
+			  <% @user_uploads.each do |ua| %>
+				<div class="col-md-3">
+				  	<div style=" width: 100%;">
+				  		<%= link_to image_tag( ua.picture.url(:small), :style => "width: 100%;"), ua %>
+				 		<%= link_to( ua.title, ua) %>
+					</div>
+				</div>
+			<% end %>
+			  <%= link_to " view more of #{@user.name} Photos", user_uploads_url(@user), :style =>" clear: both; margin-top:10px; margin-bottom:10px;", :class =>"btn btn-warning btn-lg btn-block"%>
+			
+			<% end %>
+		<% else %>
+		<% @user_uploads.each do |ua| %>
+		<div class="col-md-3">
+	  <div style=" width: 100%;">
+	  <%= link_to image_tag( ua.picture.url(:thumb), :style => "width: 100%;"), ua %>
+	  <%= link_to( ua.title, ua) %>
+		</div>
+		</div>
+	  <% end %>
+	  <%= link_to " view more of #{@user.name} Photos", user_uploads_url(@user), :style =>" clear: both;margin-top:10px; margin-bottom:10px;", :class =>"btn btn-warning btn-lg btn-block"%>
+	  <% end %>
+	   <div id="paginator">
+	  <%= paginate @user_uploads %>
+		</div>
+</div>
+	

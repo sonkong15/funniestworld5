@@ -1,0 +1,32 @@
+ 
+ <%= form_for @upload, :class => "upload home-up form-group", :multipart => true  do |f| %>
+    
+    <div class="form-group" style="margin-bottom: 0px; margin-top: 6px">
+    <%= f.label "caption(only 25 letters)", :class => "inlinefrom", :style => "font-size: 19px;color: black;" %>
+    </div>
+    <%= f.text_field :title  %>
+    
+    <div class="form-group" style="margin-bottom: 0px; margin-top: 6px">
+      <%= f.label :Add_Photo, :class => "inlinefrom", :style => "font-size: 19px;color: black;" %>
+    </div>
+    <%= f.file_field :picture, :class => "ups" %>
+    <div class="form-group" style="margin-bottom: 0px; margin-top: 6px">
+    <%= f.label :Description, :style => "font-size: 19px;color: black;", :disabled => true %>
+    </div>
+    <%= f.text_area :text  %>
+
+    <hr>
+    <div class="form-group" style="margin-bottom: 0px; margin-top: 6px">
+    <%= f.label :Categories, :style => "font-size: 19px;color: black;" %>
+    </div>
+    <%= f.collection_select :category_ids, Category.order(:title), :id, :title, {}, {multiple: true, :style => "width: 300px" } %>
+    <br>
+    <div class="popover out fade bottom in" style="top: 17767px; left: 727px; display: block;"><div class="arrow"></div><h3 class="popover-title" style="display: ;"></h3><div class="popover-content"></div></div>
+    
+    <div class="form-group" style="margin-bottom: 0px; margin-top: 6px">
+   <%= f.submit "Upload Photo!", class: "btn btn-large btn " %>
+   </div>
+   <div class="inlinefrom">
+    
+    </div>
+    <% end %>

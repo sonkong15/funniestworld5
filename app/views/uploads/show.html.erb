@@ -1,0 +1,76 @@
+<% title "#{@upload.title}" %>
+<div class="ad-728-90home">
+ <div class="thumbnail2" style=" border: 0px;">
+    <!--ad goes here -->
+ </div>
+ <p style="color: white;">Street Affiliated is a site where users can share photo of there cars, rc cars and custom model cars. if you are a photograper or a person that has great photos of cars, rc cars and custom model cars and would like the world to see add them here. Street Affiliated site is growing be apart and add your car photos here   </p>
+</div>
+<div class="homebox">
+	<div class="row">
+  		<div class="col-md-8">
+    		<div class="thumbnail" style=" background-color:rgba(0, 0, 0, 0.16);  border: 0px;">
+    			<h2 style="border-bottom: 1px solid white; color: white;" class="p-title"><%= @upload.title %></h2>
+    			<%= image_tag(@upload.picture.url(:large), :style => "width: 75%;") %>
+                
+    			<nav class="navbar navbar-inverse " style= "background-color: #0A0A0A;" role="navigation">
+    		<span class='st_sharethis_large' displayText='ShareThis'></span>
+            <span class='st_facebook_large' displayText='Facebook'></span>
+            <span class='st_twitter_large' displayText='Tweet'></span>
+            <span class='st_linkedin_large' displayText='LinkedIn'></span>
+            <span class='st_pinterest_large' displayText='Pinterest'></span>
+            <span class='st_email_large' displayText='Email'></span>
+    			</nav>
+    		</div>
+    		<div class="ad-728-90home">
+    		<div class="thumbnail" style="background-color: black; border: 0px; width: 336px; margin: 0px auto;">
+                   			  <!-- ad goes here -->
+ 			</div>
+ 			</div>
+    		<div class=" editthings" style="margin-top:  15px;" >
+	  	<% if can? :destroy, @upload %>
+			  			<%= link_to "Edit", edit_upload_path(@upload) %>   
+					<% end %>
+					<% if can? :destroy, @upload %>
+			    		<%= link_to "Destroy", @upload, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
+			    		<span><strong>Only you can see this</strong></span>
+			  		<% end %>
+			 </div>
+			 <hr>
+    	</div>
+     <div class="col-md-4">
+    	<%= image_tag("underline.jpg") %>
+    	<p style="font-size: 19px;color: brown;padding: 0px 0px 0px 0px;"><span style="color: white"> Photo Date:</span> <%= @upload.created_at.strftime("%B %d, 20%y") %></p>
+    	<%= image_tag("underline.jpg") %>
+    	<div class="likeornotholder">
+    	
+			<hr>
+			
+            <%= image_tag("underline.jpg") %>
+            <div class="next-pev">
+                <ul>
+                    <% if @upload.next_upload %>
+                    <li class="next-box"><%= link_to("Previous Photo", @upload.next_upload, :class => "")  %></li>
+                    <% end %>
+                    <% if @upload.previous_upload %>
+                    <li class="next-box"><%= link_to("Next Photo", @upload.previous_upload,:class => "")  %></li>
+                    <% end %>
+
+                </ul>
+
+            </div>
+    </div>
+  </div>
+	</div>
+	<div class="row">
+		<hr>
+	  <div class="col-md-8">
+	  	<div class="">
+    	<div class="fb-comments" data-href="<%= upload_url(@upload) %>" data-numposts="10" data-colorscheme="dark"></div>
+    	</div>
+		</div>
+	  <div class="col-md-4">
+	  		
+	  </div>
+	</div>
+	
+</div>

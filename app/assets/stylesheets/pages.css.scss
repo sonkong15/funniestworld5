@@ -1,0 +1,238 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+.wysihtml5{
+	padding: 10px
+}
+.homebox{
+	min-width: 1000px;
+	margin: 0px auto;
+	max-width: 1200px;
+}
+.ad-728-90home{
+	width: 728px;
+	margin: 0px auto;
+}
+.ad-728-90home2{
+	width: 336px;
+	margin: 0px auto;
+}
+.usernameprofile{
+	line-height: 12px;
+text-shadow: 0px 1px 2px #383737;
+width: 288px;
+padding: 20px 0px 0px 14px;
+color: rgb(219, 119, 62);
+height: 40px;
+font-size: 21.5px;
+border-bottom: 1px solid white;
+}
+.showpageuploadrow {
+position: absolute;
+margin-top: -83px;
+margin-left: 0px;
+width: 90.5%;
+background-color: rgba(0, 0, 0, 0.8);
+height: 86px;
+}
+body{
+	background-image: image-url("background-one.jpg");
+		-webkit-background-size: cover;
+background-size: cover;
+height: 912px;
+background-position: 64% 34%;
+background-repeat: no-repeat;
+height: 100%;
+position: absolute;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 1;
+background-color: black;
+}
+.popupupload{
+background-image: image-url("background-top.jpg");
+		-webkit-background-size: cover;
+background-size: cover;
+
+}
+blockquote {
+padding: 0px 25px;
+margin: 0 0 20px;
+font-size: 17.5px;
+border: 0px;
+}
+.formakeup  img{
+	margin: 10px;
+	max-width: 100%;
+}
+.articleimg{
+	margin-top: 30px; 
+max-height: 250px;
+}
+.articleusername{
+	font-family: 'Roboto Condensed',sans-serif;
+	text-shadow: 1px 1px 1px #000;
+	color: white;
+	font-size: 19px;
+	line-height: 1;
+}
+.formakeup  span{
+	color: white;
+}
+.formakeup  div{
+	color: white;
+	font-size: 15px;
+}
+.formakeup{
+	color: white;
+	font-size: 16px;
+}
+.tagslist  {
+	color: black;
+}
+.btn-warning{
+background-color: #e94626;
+border-color: #e94626;
+}
+#tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
+.editthings{
+	background-color: rgb(32, 21, 32);
+}
+.borderb{
+	border-bottom: 1px soild white;
+} 
+.sharethis{
+	padding: 0px;
+	width: 427px;
+	margin: 0px auto;
+}
+.nextb{
+	width: 100%;
+	min-height: 100px;
+}
+.next-pev{
+	margin: 0px auto;
+	height: 50px;
+background-color: #e94626;
+width: 390px;
+padding: 10px 0px 7px 0px;
+
+-webkit-box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
+-moz-box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
+box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
+}
+.next-box{
+font-size: 20px;
+display: inline;
+line-height: 30px;
+margin: 12px 15px 0px 0px;
+height: 37px;
+width: 125px;
+padding: 10px;
+-moz-border-radius: 5px 5px 5px;
+border-radius: 5px 5px 5px;
+text-align: center;
+-webkit-box-shadow: inset 5px 5px 10px 10px #181615;
+box-shadow: inset 5px 5px 10px 10px #000000;
+background-image: linear-gradient(bottom, #141314 0%, #2b282b 100%);
+background-image: -o-linear-gradient(bottom, #141314 0%, #2b282b 100%);
+background-image: -moz-linear-gradient(bottom, #141314 0%, #2b282b 100%);
+background-image: -webkit-linear-gradient(bottom, #141314 0%, #2b282b 100%);
+background-image: -ms-linear-gradient(bottom, #141314 0%, #2b282b 100%);
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #111111), color-stop(1, #2b282b));
+margin-top: 15px;
+
+}
+.thumb2{
+	display: block;
+padding: 4px;
+margin-bottom: 20px;
+line-height: 1.428571429;
+background-color: rgba(0, 0, 0, 0.63);
+border: 1px solid #dddddd;
+border-radius: 4px;
+min-height: 600px;
+
+}
+.pagination > li > a{
+	background-color: black;
+}
+.pagination > .active > a{
+	z-index: 2;
+color: white;
+background-color: #6342CA;
+border-color: white;
+cursor: default;
+}
+.plusminus1{
+margin-top: 5px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+padding-top: 0px;
+ float: right;
+ font-size: 1.2em
+}
+.plusminus{
+	padding: 2px 5px;
+}
+.thumbnail2 {
+display: block;
+padding: 4px;
+margin-bottom: 20px;
+line-height: 1.428571429;
+border-radius: 4px;
+}
+.signup-price-bg {
+background-color: #000;
+background: rgba(31,27,27,0.26);
+color: rgba(73,82,94,0.2);
+-webkit-box-shadow: 2px 12px 11px 9px rgba(0,0,0,0.1);
+box-shadow: 2px 12px 11px 9px rgba(0,0,0,0.1);
+-webkit-border-radius: 3px;
+border-radius: 3px;
+padding: 20px;
+}
+.signup-logout {
+font-size: 22px;
+font-weight: 500;
+line-height: 20px;
+}
+.red {
+color: #d5585a;
+}
+.controls {
+margin-left: 180px;
+}
+.control-group {
+margin-bottom: 20px;
+}
+.white{
+	color: white;
+}
+.follows{
+	color: white;
+	margin-bottom: 0px;
+
+}
+.followingdiv{
+	float: left; 
+	border-right: 1px solid white;
+	padding: 5px;
+
+}
+.likerbox{
+	float: right;
+	margin-right: 19%; 
+	font-size: 20px;
+	color: white; 
+	position: absolute;
+	background-color: black;
+}

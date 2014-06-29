@@ -1,0 +1,43 @@
+
+
+<div class="ad-728-90home">
+ <div class="thumbnail" style=" background-color:  black;">
+    
+ </div>
+</div>
+
+<div class="homebox">
+    <h2 class="p-title" style="color:white;"></h2>
+	<div class="row">
+  		<div class="col-md-3">
+    			 <div class="thumbnai" style=" background-color:rgba(0, 0, 0, 0.16);  border: 0px;">
+    	<h3 style="border-bottom: 1px solid white; color: white;"><%= @user.name %></h3>
+    	<%= image_tag(@user.image_url, style: "width: 50%;") %>
+        <%= image_tag("underline2.jpg") %>
+        <h3 style="font-size: 15px;color: brown;padding: 0px 0px 0px 0px;margin-top: 5px;margin-bottom: 1px; "> Photos uploaded <span style="color:white;"><%= @user_uploads.count %></span></h3>
+    	<%= image_tag("underline2.jpg") %>
+        
+        <%= image_tag("underline2.jpg") %>
+        <h3>Bio:</h3> <p><%= @user.bio %></p>
+    		</div>
+    	</div>
+     <div class="col-md-9">
+     	<% if @banner == nil? %>
+    	<div class="thumbnail " >
+
+    	<%= image_tag("https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/t31/1277806_453094968140181_616824664_o.jpg") %>
+        </div>
+    	<% else %>
+    	<div class="thumbnail" style="border: 0px;background-color: rgba(0, 0, 0, 0.56);">
+    	<% @banner.map do |b| %>
+    	<%= image_tag( b.picture.url(:large)) %>
+    	<% end %>
+    	</div>
+    	<% end %>
+    
+  </div>
+	</div>
+	
+	<%= render("pro_user") %>
+	
+	</div>

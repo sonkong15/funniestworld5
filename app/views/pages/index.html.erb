@@ -1,0 +1,123 @@
+
+<div class="homebox">
+	<div class="row">
+<h2 style=" margin-bottom: 0px; color: white;">Categories</h2>
+<%= image_tag("underlinepng.png") %>
+<div class="col-md-10">
+  <ul class="nav nav-pills">
+ <% @cat.each do |cat| %>
+<li class=""><%= link_to cat.title, category_url(cat) %></li>
+ <% end %>
+</ul>
+</div>
+  </div>
+	<div class="row">
+        <h2 style="border-bottom: 1px solid white; color: white;"> Recent Photos </h2>
+		<% @uploads.each_with_index do |upload, index| %>
+  		<div class="col-md-6">
+    		<div class="" style="border: 0px; margin-bottom: 20px; ">
+    			<table>
+    				<tr>
+    					<td>
+    			
+    			<%= link_to image_tag(upload.picture.url(:large), :alt => upload.title, :title => upload.title, :style =>"width: 95%;max-height: 380px;"), upload,{:class => "img_user"}  %>
+    			</td>
+    			</tr>
+    			<tr class= "showpageuploadrow">
+
+    					<td style="width: 500px;">
+                            <div class="plusminus btn-default" style="float: right;"><h3 class= "plusminus1"><%= upload.plusminus %> Likes</h3></div>
+    						<h2 style= "color: white; margin-bottom: 5px"><%= upload.title %></h2>
+    						<p style="font-size: 19px;color: brown;padding: 0px 0px 0px 10px;"> <%= upload.created_at.strftime("%B %d, 20%y") %></p>
+
+    					</td>
+    			</tr>
+    			</table>
+    		</div>
+    	</div>
+    	<% end %>
+	</div>
+	<div class="row">
+		<% @uploads2.each_with_index do |uploads2, index| %>
+	  <div class="col-md-4">
+	  	<div class="" style="border: 0px; margin-bottom: 20px; ">
+    	<table>
+    				<tr>
+    					<td>
+    			
+    			<%= link_to image_tag(uploads2.picture.url(:large), :alt => uploads2.title, :title => uploads2.title, :style =>"width: 95%; max-height: 244px; "), uploads2,{:class => "img_user"}  %>
+    			</td>
+    			</tr>
+    			<tr class= "showpageuploadrow">
+    					<td style="width: 350px;">
+                            <div class="plusminus btn-default" style="float: right;"><h3 class= "plusminus1"><%= uploads2.plusminus %> Likes</h3></div>
+    						<h2 style= "color: white; margin-bottom: 5px"><%= truncate(" #{uploads2.title}", :length => 18) %></h2>
+    						<p style="font-size: 19px;color: brown;padding: 0px 0px 0px 10px;"> <%= uploads2.created_at.strftime("%B %d, 20%y") %></p>
+    					</td>
+    			</tr>
+    			</table>
+    	</div>
+		</div>
+		<% end %>
+	</div>
+	<%= link_to "More Photos", uploads_url,  :class =>"btn btn-warning btn-lg btn-block", :style => "margin-bottom: 15px;" %>
+	<div class="row">
+	  <div class="col-md-8">
+	  	<div class="ad-728-90home">
+ 		<div class="thumbnail" style="background-color: black;">
+    	<!-- ad1 goes here -->
+		 </div>
+		</div>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-8">
+      <h2 style=" margin-bottom: 0px; color: white;">top 3 most liked users</h2>
+      <div>
+        <%= image_tag("underlinepng.png") %>
+        </div>
+        <!--<div>
+          <h2 style=" margin-bottom: 0px; color: white;">top 3 most liked users</h2>
+        <%# image_tag("underlinepng.png") %>
+        </div>
+        <%# @users_photo %>
+        <%# image_tag(upload.user.image_url, :style => "width: 100px;") %>
+        <%# end %> 
+        
+        <!--<h2 style="border-bottom: 1px solid white; color: white;"> Recent Articles </h2>
+	  	<%# @articles.each do |art| %>
+	  	<div style="">
+	  	<div style="float: left; margin-right: 5px;"><%# link_to image_tag(art.photo.url(:small)), article_url(art) %></div>
+	  	<h3 style ="font-family: 'Roboto Condensed',sans-serif;text-shadow: 1px 1px 1px #000; color: white;font-size: 3.5em;line-height: 1;"><%# link_to art.title, article_url(art) %></h3>
+	  	<p style="font-size: 19px;color: brown;padding: 0px 0px 0px 10px;"><%# art.created_at.strftime("%B %d, 20%y") %></p>
+	  	<p style="color: white;"> <%# truncate(" #{art.summary}", :length => 260, :omission => '... (continued)') %></p>
+	  	</div>
+	  	<%# end %>
+        <%# link_to "More Articles", articles_url,  :class =>"btn btn-primary btn-lg btn-block" %>-->
+	  </div>
+	  <div class="col-md-4">
+       <!-- <div style= "min-height: 350px;">
+        <h3 style="border-bottom: 1px solid white; color: white;"> Top Tags for Articles </h3>
+        <div id="tag_cloud">
+  <%# tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%# link_to tag.name, tag_path(tag.name), class: "#{css_class} btn btn-warning" %>
+  <%# end %>
+  </div>
+  </div>-->
+  <div style= "min-height: 350px;">
+  <h3 style="border-bottom: 1px solid white; color: white;"> Top Tags for Photos </h3>
+        
+  </div>
+</div>
+
+<div>
+<%=  image_tag("promembers.jpg") %>
+<%# @promember.each do |pro| %>
+<div style="float: left">
+<%# link_to image_tag(pro.image_url, :style =>"width: 40%;"), user_url(pro) %>
+</div>
+<%# end %>
+</div><!-- promembers !-->
+</div>
+	</div>
+</div>

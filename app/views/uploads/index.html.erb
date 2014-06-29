@@ -1,0 +1,32 @@
+<div class="row" >
+      <div class=" col-md-10" style= "  ">
+
+         <div class="thumbnail" style="width: 800px; margin: 0px auto; margin-bottom: 20px; background-color: black;">
+<div class="homebox">
+
+	<div class="row" >
+		<% @uploads.each do |ar| %>
+	  <div class=".col-xs-6 col-md-4" style= "min-height: 410px;  ">
+	  	<div class="thumb2">
+    	
+    	<%= link_to image_tag(ar.picture.url(:large), :style => "width: 100%; "), upload_url(ar) %>
+    	<h3 style ="font-family: 'Roboto Condensed',sans-serif;text-shadow: 1px 1px 1px #000; color: white;font-size: 2.3em;line-height: 1;"><%= link_to ar.title, upload_url(ar) %></h3>
+                            <div class="plusminus btn-default" style="float: right;"><h3 class= "plusminus1"><%= ar.plusminus %> Likes</h3></div>
+    	<p style="font-size: 19px;color: brown;padding: 0px 0px 0px 0px;"> Date: <%= ar.created_at.strftime("%B %d, 20%y") %></p>
+    	<p style = "border-bottom: 1px solid white; width: 100%;"> By: <%= link_to ar.user.name, user_uploads_url(ar.user)%></p>
+    	
+    	</div>
+    	
+		</div>
+		<% end %>
+    </div>
+    <%= link_to "Top Photos", top_photos_url,  :class =>"btn btn-primary btn-lg btn-block" %>
+    <hr>
+		<div>
+        <div class="ad-728-90home">
+             <div class="">
+                <%= paginate @uploads, :outer_window => 3 %>
+             </div>
+        </div>
+    </div>
+    
