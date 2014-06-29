@@ -12,20 +12,27 @@
     			<h2 style="border-bottom: 1px solid white; color: white;" class="p-title"><%= @upload.title %></h2>
     			<%= image_tag(@upload.picture.url(:large), :style => "width: 75%;") %>
                 
-    			<nav class="navbar navbar-inverse " style= "background-color: #0A0A0A;" role="navigation">
-    		<span class='st_sharethis_large' displayText='ShareThis'></span>
-            <span class='st_facebook_large' displayText='Facebook'></span>
-            <span class='st_twitter_large' displayText='Tweet'></span>
-            <span class='st_linkedin_large' displayText='LinkedIn'></span>
-            <span class='st_pinterest_large' displayText='Pinterest'></span>
-            <span class='st_email_large' displayText='Email'></span>
+    			<nav class="navbar navbar-inverse " style= "background-color: #0A0A0A; margin: 0px 10.8%;" role="navigation">
+    		<span class='st_sharethis_vcount' displayText='ShareThis'></span>
+<span class='st_googleplus_vcount' displayText='Google +'></span>
+<span class='st_facebook_vcount' displayText='Facebook'></span>
+<span class='st_reddit_vcount' displayText='Reddit'></span>
+<span class='st_twitter_vcount' displayText='Tweet'></span>
+<span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+<span class='st_pinterest_vcount' displayText='Pinterest'></span>
+<span class='st_email_vcount' displayText='Email'></span>
     			</nav>
     		</div>
     		<div class="ad-728-90home">
     		<div class="thumbnail" style="background-color: black; border: 0px; width: 336px; margin: 0px auto;">
                    			  <!-- ad goes here -->
  			</div>
+           
  			</div>
+             <div class="">
+            <h4 style="color:white;"><%= @upload.text %></h4>
+        </div>
+        <hr>
     		<div class=" editthings" style="margin-top:  15px;" >
 	  	<% if can? :destroy, @upload %>
 			  			<%= link_to "Edit", edit_upload_path(@upload) %>   
@@ -62,15 +69,27 @@
   </div>
 	</div>
 	<div class="row">
-		<hr>
+
 	  <div class="col-md-8">
 	  	<div class="">
-    	<div class="fb-comments" data-href="<%= upload_url(@upload) %>" data-numposts="10" data-colorscheme="dark"></div>
+    	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'funniestthingintheworld'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
     	</div>
 		</div>
-	  <div class="col-md-4">
-	  		
-	  </div>
+	 
 	</div>
 	
 </div>

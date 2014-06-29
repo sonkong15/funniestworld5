@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require chosen-jquery
+//= require bootstrap/modal
+//= require bootstrap/dropdown
 //= require_tree .

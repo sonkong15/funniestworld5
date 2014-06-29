@@ -13,9 +13,7 @@ class Ability
         can :manage, User do |us|
         us.id == user.id 
       end
-      can :manage, category do |cat|
-        cat.try(:user) == user
-        end
+     
     end
     # Define abilities for the passed in user here. For example:
     #

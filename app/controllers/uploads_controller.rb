@@ -35,7 +35,7 @@ class UploadsController < ApplicationController
 	def show
 		@upload = Upload.find(params[:id])
 		@uploads = Upload.order("RANDOM ()")
-		@users_like = Upload.plusminus_tally.limit(3)
+		
 	end
 
 	def edit

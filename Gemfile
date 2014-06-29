@@ -26,6 +26,7 @@ group :assets do
   gem "paperclip", "~> 3.0"
   gem "cocaine", "0.3.2"
   gem 'kaminari'
+  gem "ransack"
   gem "aws-sdk", "~> 1.6.5"
   gem "auto_html", "~> 1.6.0"
   gem 'acts-as-taggable-on', '~> 2.3.1'

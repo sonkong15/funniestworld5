@@ -10,7 +10,7 @@ class Upload < ActiveRecord::Base
 	has_attached_file :picture, :styles =>{ :thumb => "149x116#", :small => "200x160#", :large => "600x500>"},
 	:storage => :s3,
     :s3_credentials => "#{Rails.root}/config/aws.yml",
-    :path => ":id/:style.:extension",
+    :path => "/site5/:filename/:id/:style.:extension",
     :hash_secret => ''
     validates :title, length: {maximum: 25}
 	validates :title, presence: true
